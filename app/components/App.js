@@ -10,9 +10,12 @@ const App = props => {
 	return (
 		<div>
 			<SideMenu />
-			<HeaderContainer />
-			<AboutContainer />
-			<ContactContainer />
+			<div className='main-content-container container'>
+				<HeaderContainer />
+				<AboutContainer />
+				<ImageContainer />
+				<ContactContainer />
+			</div>
 		</div>
 	)
 }

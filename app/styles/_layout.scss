@@ -6,20 +6,30 @@ body {
 
 .container {
 	display: block;
-	margin: 0.5em auto 0.5em 6.5em;
+	margin: 0.5em auto;
 	padding: 2%;
 }
 
+.main-content-container {
+	margin-top: 4em;
+}
+
 .header-container {
-	border: 1px solid blue;
+	border: 2px solid $blue;
+	height: 25em;
 }
 
 .about-container {
-	border: 1px solid orange;
+	border: 2px solid $yellow;
+}
+
+.image-container {
+	border: 2px solid $blue;
+	min-height: 15em;
 }
 
 .contact-container {
-	border: 1px solid green;
+	border: 2px solid $green;
 }
 
 .details {

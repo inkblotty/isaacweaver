@@ -1,21 +1,21 @@
 .menu {
 	align-content: center;
-	background-color: $menuColor;
+	border: 2px solid $red;
 	display: flex;
 	flex-wrap: wrap;
-	height: 100vh;
 	justify-content: center;
 	left: 0;
+	padding: 1% 0;
 	position: fixed;
 	text-align: center;
 	top: 0;
-	width: 6em;
+	width: 99vw;
 }
 
 .menu-btn {
 	border: 0px solid white;
 	box-shadow: none;
-	color: $mainBack;
+	color: $red;
 	display: block;
 	letter-spacing: 0.1em;
 	margin-bottom: 0.5em;
