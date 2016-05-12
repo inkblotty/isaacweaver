@@ -1,0 +1,41 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.menu { border: 1px solid red;
+	display: flex;
+	height: 100vh;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 5%;
+}
+
+.container {
+	display: block;
+	margin: 0 auto 0 6%;
+	padding: 2%;
+}
+
+.header-container { border: 1px solid blue;
+}
+
+.about-container {
+	border: 1px solid orange;
+}
+
+.details {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	img {
+		max-width: 15%;
+	}
+
+	p {
+		max-width: 75%;
+	}
+}

@@ -1,0 +1,57 @@
+.appear-enter {
+	transition-duration: .7s;
+	transition-property: opacity;
+	trasition-timing-function: ease-out;
+	opacity: 0;
+}
+
+.appear-enter.appear-enter-active {
+	opacity: 1;
+}
+
+.appear-leave {
+	opacity: 0;
+}
+
+.slide-enter {
+	transition: transform 1000ms ease-in-out, opacity 800ms ease-out 200ms;
+	transform: translate(250%);
+	opacity: 0;
+}
+
+.slide-back-enter {
+	transition: transform 1000ms ease-in-out, opacity 800ms ease-out 200ms;
+	transform: translate(-250%);
+	opacity: 0;
+}
+
+.slide-enter.slide-enter-active {
+	transform: translate(50%);
+	opacity: 1;
+}
+
+.slide-back-enter.slide-back-enter-active {
+	transform: translate(50%);
+	opacity: 1;
+}
+
+.slide-leave {
+	transform: translate(0%);
+}
+
+.slide-back-leave {
+	transition: transform 0.8s ease-in-out;
+	transform: translate(150%);
+}
+
+.slide-leave.slide-leave-active {
+	transform: translate(-250%);
+	transition: all 700ms ease-in-out;
+	opacity: 0;
+}
+
+.slide-back-leave.slide.back-leave-active {
+	transform: translate(250%);
+	transition: all 700ms ease-in-out;
+	opacity: 0;
+}
