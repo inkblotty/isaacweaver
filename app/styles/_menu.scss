@@ -1,0 +1,30 @@
+.menu {
+	align-content: center;
+	background-color: $menuColor;
+	display: flex;
+	flex-wrap: wrap;
+	height: 100vh;
+	justify-content: center;
+	left: 0;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	width: 6em;
+}
+
+.menu-btn {
+	border: 0px solid white;
+	box-shadow: none;
+	color: $mainBack;
+	display: block;
+	letter-spacing: 0.1em;
+	margin-bottom: 0.5em;
+	text-transform: lowercase;
+
+	&:hover {
+		border: 0px solid white;
+		box-shadow: none;
+		cursor: pointer;
+		letter-spacing: 0.2em;
+	}
+}

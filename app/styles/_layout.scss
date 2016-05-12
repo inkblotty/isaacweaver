@@ -4,26 +4,22 @@ body {
 	align-items: flex-start;
 }
 
-.menu { border: 1px solid red;
-	display: flex;
-	height: 100vh;
-	left: 0;
-	position: fixed;
-	top: 0;
-	width: 5%;
-}
-
 .container {
 	display: block;
-	margin: 0 auto 0 6%;
+	margin: 0.5em auto 0.5em 6.5em;
 	padding: 2%;
 }
 
-.header-container { border: 1px solid blue;
+.header-container {
+	border: 1px solid blue;
 }
 
 .about-container {
 	border: 1px solid orange;
+}
+
+.contact-container {
+	border: 1px solid green;
 }
 
 .details {

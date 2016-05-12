@@ -2,39 +2,8 @@
 @import '_colors';
 @import '_layout';
 
+@import '_base-styles';
+@import '_menu';
 @import '_thumbImgs';
 @import '_carousel';
 @import '_animations';
-
-body {
-	background: $mainBack;
-	color: $mainText;
-	font-family: Arial, sans-serif;
-}
-
-li {
-	list-style-type: none;
-}
-
-a {
-	color: $mainText;
-}
-
-.hidden {
-	display: none;
-}
-
-.btn {
-	border: 1px solid grayscale(darken($mainBack, 8%));
-	border-radius: 0.25em;
-	box-shadow: 0px 0px 0.5px rgba(0,0,0,0.4);
-	margin: 0.5%;
-	padding: 0.5%;
-
-	transition: all ease 0.5s;
-
-	&:hover {
-		border: 1px solid grayscale(darken($mainBack, 12%));
-		box-shadow: 1px 1px 2px rgba(0,0,0,0.4), -1px -1px 2px rgba(0,0,0,0.4);
-	}
-}
