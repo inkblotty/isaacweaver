@@ -1,9 +1,9 @@
 const React = require('react');
 
-const SideMenu = React.createClass({
+const MainMenu = React.createClass({
 	render: function() {
 		return (
-			<div className='menu'>
+			<div id='menu' className='hidden'>
 				<div className='btn menu-btn'>
 					About
 				</div>
@@ -18,4 +18,4 @@ const SideMenu = React.createClass({
 	}
 })
 
-module.exports = SideMenu;
+module.exports = MainMenu;

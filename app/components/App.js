@@ -1,23 +1,56 @@
 const React = require('react');
 
-const SideMenu = require('./SideMenu');
+const MainMenu = require('./MainMenu');
 const HeaderContainer = require('./HeaderContainer');
 const AboutContainer = require('./AboutContainer');
 const ImageContainer = require('./ImageContainer');
 const ContactContainer = require('./ContactContainer');
 
-const App = props => {
-	return (
-		<div>
-			<SideMenu />
-			<div className='main-content-container container'>
-				<HeaderContainer />
-				<AboutContainer />
-				<ImageContainer />
-				<ContactContainer />
+const App = React.createClass({
+	getInitialState: function() {
+		return {
+			showMenu: false
+		}
+	},
+	componentDidMount: function() {
+		window.addEventListener('scroll', this.handleScroll);
+	},
+	handleScroll: function() {
+		var top = window.scrollY;
+
+		if ((top >= 400) && !this.state.showMenu) {
+			document.getElementById('header-btn-container').classList.value = "hidden";
+			document.getElementById('menu').classList.value = "";
+
+			this.setState({
+				showMenu: true
+			})
+		}
+		else if ((top < 400) && this.state.showMenu) {
+			document.getElementById('header-btn-container').classList.value = "";
+			document.getElementById('menu').classList.value = "hidden";
+
+			this.setState({
+				showMenu: false
+			})
+		}
+	},	
+	componentWillUnmount: function() {
+		window.removeEventListener('scroll', this.handleScroll);
+	},
+	render: function() {
+		return (
+			<div onScroll={this.scroll}>
+				<MainMenu />
+				<div className='main-content-container container'>
+					<HeaderContainer />
+					<AboutContainer />
+					<ImageContainer />
+					<ContactContainer />
+				</div>
 			</div>
-		</div>
-	)
-}
+		)
+	}
+});
 
 module.exports = App;
