@@ -5,7 +5,7 @@
 	flex-wrap: wrap;
 	left: 0;
 	justify-content: center;
-	padding: 1% 0;
+	padding: 0.8% 0;
 	position: fixed;
 	text-align: center;
 	top: 0;
@@ -44,17 +44,25 @@
 	display: flex;
 	justify-content: center;
 
-	transition: all 0.5s ease;
+	transition: all 0.4s ease;
 }
 
 .header-btn {
 	border: 1px solid $red;
 	color: $red;
-	display: block;
+	display: block; 
 	letter-spacing: 0.1em;
+	margin-right: 0.8em;
+	padding: 1% 0;
 	text-align:center;
 	text-transform: lowercase;
 	width: 7em;
+
+	transition: all 0.5s ease;
+
+	&:last-child {
+		margin-right: 0;
+	}
 
 	&:hover {
 		cursor: pointer;
