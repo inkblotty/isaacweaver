@@ -18,7 +18,7 @@ const App = React.createClass({
 	handleScroll: function() {
 		var top = window.scrollY;
 
-		if ((top >= 400) && !this.state.showMenu) {
+		if ((top >= 401) && !this.state.showMenu) {
 			document.getElementById('header-btn-container').classList.value = "hidden";
 			document.getElementById('menu').classList.value = "";
 
@@ -26,7 +26,7 @@ const App = React.createClass({
 				showMenu: true
 			})
 		}
-		else if ((top < 400) && this.state.showMenu) {
+		else if ((top < 401) && this.state.showMenu) {
 			document.getElementById('header-btn-container').classList.value = "";
 			document.getElementById('menu').classList.value = "hidden";
 
