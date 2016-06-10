@@ -93,9 +93,10 @@
 	}
 
 	.thumb-img {
-		border-radius: 1em;
+		border-radius: 0.25em;
 		cursor: pointer;
+		max-height: 12em;
+		overflow: hidden;
 		object-fit: contain;
-		max-height: 10em;
 	}
 }

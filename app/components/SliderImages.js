@@ -13,7 +13,7 @@ function isInRange(index, range) {
 const SliderImages = props => {
 	let ThumbItems = ImgArray.map((item, index) => {
 		let key=`slider-thumb${index}`;
-		let url=`../${item}`;
+		let url=`${item}`;
 
 		if (isInRange(index,props.activeRange)) {
 			return (

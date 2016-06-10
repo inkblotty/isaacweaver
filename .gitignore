@@ -1,3 +1,5 @@
 node_modules
 build/*
 websiteSpecs.txt
+imagesArray.js
+imageObjs.js

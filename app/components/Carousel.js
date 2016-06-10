@@ -44,7 +44,7 @@ const Carousel = React.createClass({
 		});
 	},
 	render: function() {
-		let currentImg = '../' + this.state.currentImg;
+		let currentImg = this.state.currentImg;
 
 		return (
 			<div className="carousel-container">
