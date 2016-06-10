@@ -1,26 +1,62 @@
 const React = require('react');
 const Link = require('react-router').Link;
 
-const Thumbnail = props => {
-	let pathname = `/carousel/${props.imgIndex}`;
-	let showClass = props.showClass ? `thumb-wrapper thumb-${props.showClass}` : 'thumb-wrapper';
+const Thumbnail = React.createClass({
+	getInitialState: function() {
+		return {
+			spinClass: 'fa fa-spin fa-spinner',
+			errorClass: 'hidden',
+			error: '',
+			imgClass: 'hidden'
+		}
+	},
+	handleImageLoaded: function() {
+		this.setState({
+			spinClass: 'hidden',
+			errorClass: '',
+			imgClass: ''
+		})
+	},
+	handleImageError: function() {
+		this.setState({
+			spinClass: 'hidden',
+			errorClass: '',
+			error: 'image unavailable'
+		})
+	},
+	render: function() {
+		let pathname = `/carousel/${this.props.imgIndex}`;
+		let showClass = this.props.showClass ? `thumb-wrapper thumb-${this.props.showClass}` : 'thumb-wrapper';
 
-	if (!props.fromCarousel) {
-		return (
-			<div className="thumb-wrapper">
-				<Link to={pathname} >
-				<img src={props.imgSrc} className="thumb-img" />
-				</Link>
-			</div>
-		)
+		if (!this.props.fromCarousel) {
+			return (
+				<div className="thumb-wrapper">
+					<Link to={pathname} >
+						<i className={this.state.spinClass}></i>
+						<span className={this.state.errorClass}>{this.state.error}</span>
+						<img
+							src={this.props.imgSrc}
+							onLoad={this.handleImageLoaded}
+							onError={this.handleImageError}
+							className={`thumb-img ${this.state.imgClass}`} />
+					</Link>
+				</div>
+			)
+		}
+		else {
+			return (
+				<div className={showClass} onClick={this.props.onClick}>
+					<i className={this.state.spinClass}></i>
+					<span className={this.state.errorClass}>{this.state.error}</span>
+					<img
+						src={this.props.imgSrc}
+						onLoad={this.handleImageLoaded}
+						onError={this.handleImageError}
+						className={`thumb-img ${this.state.imgClass} ${this.props.imgIndex}`} />
+				</div>
+			)	
+		}
 	}
-	else {
-		return (
-			<div className={showClass} onClick={props.onClick}>
-				<img src={props.imgSrc} className={`thumb-img ${props.imgIndex}`} />
-			</div>
-		)
-	}
-}
+});
 
 module.exports = Thumbnail;

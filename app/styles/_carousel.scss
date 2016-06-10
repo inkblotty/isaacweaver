@@ -15,6 +15,14 @@
 	margin: 0;
 	padding: 0 3%;
 
+	&.little {
+		background-color: rgba(240,245,249,0.8); // this is $mainBack with a transparency
+		
+		&:hover {
+			background-color: rgba(240,245,249,0.5);
+		}
+	}
+
 	i::before {
 		margin: 0;
 		padding: 0;
@@ -22,6 +30,7 @@
 }
 
 .caption {
+	background-color: rgba(0,0,0,0);
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
@@ -43,6 +52,7 @@
 }
 
 .big-img {
+	box-shadow: -1px 1px 2px $shadow;
 	margin: 0;
 	height: 100%;
 	min-width: auto;

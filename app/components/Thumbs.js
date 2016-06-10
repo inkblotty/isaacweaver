@@ -1,13 +1,13 @@
 const React = require('react');
-const ImgArray = require('../imagesArray');
+const ImgObjs = require('../imageObjs');
 const Thumbnail = require('./Thumbnail');
 
 const Thumbs = props => {
-	let ThumbItems = ImgArray.map((item, index) => {
+	let ThumbItems = ImgObjs.map((item, index) => {
 		let key=`thumb${index}`;
 		return (
 			<li key={key}>
-				<Thumbnail imgSrc={item} imgIndex={index} />
+				<Thumbnail imgSrc={item.thumb} imgIndex={index} />
 			</li>
 		)
 	});
