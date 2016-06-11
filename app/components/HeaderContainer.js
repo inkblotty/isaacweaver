@@ -1,6 +1,8 @@
 const React = require('react');
 const SunSVG = require('babel!svg-react!../images/sunSmiley4.svg?name=SunSVG');
 
+// png fallback needed for SunSVG
+
 const HeaderContainer = React.createClass({
 	drawLine: function(pathVar, delay) {
 		var length = pathVar.getTotalLength();
