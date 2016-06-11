@@ -37,6 +37,10 @@ const common = {
 				include: PATHS.app
 			},
 			{
+				test: /\.svg$/,
+				loader: 'babel!svg-react'
+			},
+			{
 				// Set up js and jsx
 				test: /\.js$/,
 				loader: 'babel',

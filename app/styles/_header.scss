@@ -1,0 +1,33 @@
+.name-header {
+	background-size: 400px 400px;
+	display: block;
+	margin-top: 10%;
+	width: 100%;
+
+	.name {
+		display: inline-block;
+		font-family: $headerFont;
+		font-size: 5em;
+		font-weight: 300;
+		letter-spacing: 0.1em;
+	}
+
+	.line {
+		width: 37em;
+	}
+
+	.subheader {
+		letter-spacing: 0.1em;
+	}
+}
+
+#squiggle {
+	display: inline-block;
+	position: absolute;
+	right: 2%;
+	top: 8%;
+}
+
+#header-btn-container {
+	margin-top: 12em;
+}
