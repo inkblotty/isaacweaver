@@ -58,7 +58,7 @@ const common = {
 	if Webpack is called outside of npm */
 if (TARGET === 'start' || !TARGET) {
 	module.exports = merge(common, {
-		/*devServer: {
+		devServer: {
 			// This doesn't always work well on Windows
 			contentBase: PATHS.build,
 
@@ -79,16 +79,16 @@ if (TARGET === 'start' || !TARGET) {
 			
 			host: process.env.HOST,
 			port: process.env.PORT
-		},*/
+		},
 		// Source map allows you to see the source
 		// of errors in builds
 		// REMOVE FOR PRODUCTION
 		devtool: 'eval-source-map',
 		watch: true,
-		watchOptions: {
+		/*watchOptions: {
 			// More data-intesive alt to devServer
 			poll: true
-		},
+		},*/
 		plugins: [
 			new webpack.HotModuleReplacementPlugin()
 		]

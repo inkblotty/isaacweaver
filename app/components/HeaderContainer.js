@@ -1,7 +1,8 @@
 const React = require('react');
-const SunSVG = require('babel!svg-react!../images/sunSmiley4.svg?name=SunSVG');
+//const SunSVG = require('../images/sunSmiley4.SVG');
 
-// png fallback needed for SunSVG
+// ../images/sunSmiley4.svg?name=SunSVG
+// png fallback needed for SunSVG too
 
 const HeaderContainer = React.createClass({
 	drawLine: function(pathVar, delay) {
@@ -24,6 +25,8 @@ const HeaderContainer = React.createClass({
   	pathVar.style.strokeDashoffset = 0;
 	},
 	drawSun: function() {
+		return;
+		/*
 		var self = this;
 		var elems = document.getElementsByTagName('path');
 		var pathArray = Array.prototype.slice.call(elems,0);
@@ -35,26 +38,28 @@ const HeaderContainer = React.createClass({
     	path.setAttribute('stroke-dashoffset', length);
   
     	if (path.id === 'right-eye') {
-      	self.drawLine(path, '3s');
-      	setTimeout(function() {
-        	path.setAttribute('fill', '#1e2022')
-      	}, 3500);
+	      	self.drawLine(path, '3s');
+	      	setTimeout(function() {
+	        	path.setAttribute('fill', '#1e2022')
+	      	}, 3500);
     	}
     	else if (path.id !== 'path-squiggle') {
-      	self.drawLine(path, '3s');
+      		self.drawLine(path, '3s');
     	}
     	else {
-      	self.drawLine(path);
-      	setTimeout(function() {
-        	path.setAttribute('fill', '#1e2022');
-      	}, 3200);
+	      	self.drawLine(path);
+		    setTimeout(function() {
+		    	path.setAttribute('fill', '#1e2022');
+	      	}, 3200);
     	}
-  	})
+  		}) */
 	},
 	componentDidMount: function() {
 		this.drawSun();
 	},
 	render: function() {
+		// <SunSVG className='normal' /> should go inside 'squiggle' div
+
 		return (
 			<div className='header-container container'>
 				<div className='name-header'>
@@ -64,7 +69,7 @@ const HeaderContainer = React.createClass({
 				</div>
 
 				<div id="squiggle">
-  				<SunSVG className='normal' />
+  				
 				</div>
 
 				<div id='header-btn-container'>
