@@ -5,3 +5,7 @@ imagesArray.js
 imageObjs.js
 Thumbs.db
 .DS_Store
+
+# Sublime Projects
+*.sublime-workspace
+*.sublime-project
