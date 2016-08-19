@@ -1,6 +1,7 @@
 #menu {
 	align-content: center;
 	background-color: $menuColor;
+	box-shadow: 2px 0px 7px rgba(0,0,0,1);
 	display: flex;
 	flex-wrap: wrap;
 	left: 0;
@@ -24,7 +25,7 @@
 	background-color: $menuColor;
 	border: 0px solid white;
 	box-shadow: none;
-	color: $mainBack;
+	color: $mainBackColor;
 	display: block;
 	letter-spacing: 0.1em;
 	margin-bottom: 0.5em;
@@ -51,7 +52,7 @@
 .header-btn {
 	background-color: $menuColor;
 	border: 1px solid $menuColor;
-	color: $mainBack;
+	color: $mainBackColor;
 	display: block; 
 	letter-spacing: 0.1em;
 	margin-right: 0.8em;

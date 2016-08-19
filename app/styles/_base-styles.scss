@@ -1,7 +1,14 @@
 body {
-	background: $mainBack;
-	color: $mainText;
-	font-family: Arial, sans-serif;
+	background: $mainBackColor;
+	color: $mainTextColor;
+	font-family: $mainFont;
+	font-size: 1.2em;
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	margin: 0;
 }
 
 li {
@@ -9,8 +16,15 @@ li {
 }
 
 a {
-	color: $mainText;
+	color: $mainTextColor;
 	text-decoration: none;
+}
+
+p {
+	font-weight: 300;
+	letter-spacing: 0.05em;
+	line-height: 1.2em;
+	vertical-align: middle;
 }
 
 .hidden {
@@ -23,7 +37,7 @@ a {
 }
 
 .btn {
-	border: 1px solid grayscale(darken($mainBack, 8%));
+	border: 1px solid grayscale(darken($mainBackColor, 8%));
 	border-radius: 0.25em;
 	box-shadow: 0px 0px 0.5px rgba(0,0,0,0.4);
 	margin: 0.5%;
@@ -32,13 +46,13 @@ a {
 	transition: all ease 0.5s;
 
 	&:hover {
-		border: 1px solid grayscale(darken($mainBack, 12%));
+		border: 1px solid grayscale(darken($mainBackColor, 12%));
 		box-shadow: 1px 1px 2px rgba(0,0,0,0.4), -1px -1px 2px rgba(0,0,0,0.4);
 	}
 }
 
 .line {
-	background-color: $mainText;
-	height: 1px;
+	background-color: $brightMainColor;
+	height: 2px;
 	width: 100%;
 }

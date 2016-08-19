@@ -1,8 +1,7 @@
 const React = require('react');
-//const SunSVG = require('../images/sunSmiley4.SVG');
-
-// ../images/sunSmiley4.svg?name=SunSVG
-// png fallback needed for SunSVG too
+//import SunSVG from '../images/sunSmiley4.svg';
+//const backup = require('../images/sunSmiley2.png');
+const Isvg = require('react-inlinesvg');
 
 const HeaderContainer = React.createClass({
 	drawLine: function(pathVar, delay) {
@@ -58,6 +57,12 @@ const HeaderContainer = React.createClass({
 		this.drawSun();
 	},
 	render: function() {
+		/*
+			<Isvg src={ SunSVG }>
+						<img src={ backup } />
+					</Isvg>
+		*/
+
 		// <SunSVG className='normal' /> should go inside 'squiggle' div
 
 		return (
@@ -69,7 +74,7 @@ const HeaderContainer = React.createClass({
 				</div>
 
 				<div id="squiggle">
-  				
+					
 				</div>
 
 				<div id='header-btn-container'>

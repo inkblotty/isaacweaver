@@ -4,15 +4,21 @@ const MainMenu = React.createClass({
 	render: function() {
 		return (
 			<div id='menu' className='hidden'>
-				<div className='btn menu-btn'>
-					About
-				</div>
-				<div className='btn menu-btn'>
-					Gallery
-				</div>
-				<div className='btn menu-btn'>
-					Contact
-				</div>
+				<a href='#about'>
+					<div className='btn menu-btn'>
+						About
+					</div>
+				</a>
+				<a href='#gallery'>
+					<div className='btn menu-btn'>
+						Gallery
+					</div>
+				</a>
+				<a href='#contact'>
+					<div className='btn menu-btn'>
+						Contact
+					</div>
+				</a>
 			</div>
 		)
 	}

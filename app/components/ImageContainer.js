@@ -10,7 +10,7 @@ const Carousel = require('./Carousel');
 
 const ImageContainer = props => {
 	return (
-		<div className='image-container container'>
+		<div className='image-container container smoothScroll' id='gallery'>
 			<Router history={browserHistory}>
 				<Route path="/" component={ImgMenu} >
 					<IndexRoute component={Thumbs} />

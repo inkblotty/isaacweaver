@@ -1,4 +1,4 @@
-const React = require('react');
+ const React = require('react');
 
 const MainMenu = require('./MainMenu');
 const HeaderContainer = require('./HeaderContainer');

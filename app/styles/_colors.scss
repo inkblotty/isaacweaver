@@ -1,19 +1,23 @@
 // colors only
 
-$mainText: #1e2022;
-$mainBack: #f0f5f9;
-$gray: #52616a;
-$lightBlue: #c9d6de;
+$mainTextColor: #1e2022;
+$mainBackColor: #f0f5f9;
 
-$shadow: rgba(0,0,0,0.3);
+$shadowColor: rgba(0,0,0,0.3);
 
+$brightMainColor: #fe4145; //#F8D216;
+$grayColor: #52616a;
+$accent1Color: lighten($brightMainColor, 40%);
+
+$menuColor: $brightMainColor;
+
+/*
 $accent1: #dedcee;
 $brightAccent: #fbd14b;
 $accent2: #6a60a9;
-
-$menuColor: $gray;
 
 $red: #FF1B1C;
 $yellow: #FFDA23;
 $green: #84C61F;
 $blue: #2BA0DB;
+*/
