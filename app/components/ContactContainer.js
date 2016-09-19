@@ -6,8 +6,8 @@ const ContactContainer = props => {
 			<h2>Contact</h2>
 			<div className='line'></div>
 			<div className='details contact-details'>
-				<div className='phone'>222-2222</div>
-				<div className='email'>example@example.com</div>
+				<div className='phone'>(512) 554-2475</div>
+				<div className='email'>isaacweaver@live.com</div>
 			</div>
 		</div>
 	)

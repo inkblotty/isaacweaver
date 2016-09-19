@@ -23,6 +23,9 @@ const HeaderContainer = React.createClass({
   
   	pathVar.style.strokeDashoffset = 0;
 	},
+	scrollTo: function(locId) {
+
+	},
 	drawSun: function() {
 		return;
 		/*
