@@ -38,7 +38,7 @@ const common = {
 			},
 			{
 				test: /\.svg$/,
-				loader: 'babel!svg-react'
+				loader: 'babel!svg-url-loader'
 			},
 			{
 				// Set up js and jsx

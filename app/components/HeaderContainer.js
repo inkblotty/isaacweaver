@@ -1,27 +1,26 @@
 const React = require('react');
-//import SunSVG from '../images/sunSmiley4.svg';
+const SunSVG =  require('svg-url?noquotes!../images/sunSmiley4.svg');
 //const backup = require('../images/sunSmiley2.png');
-const Isvg = require('react-inlinesvg');
 
 const HeaderContainer = React.createClass({
 	drawLine: function(pathVar, delay) {
 		var length = pathVar.getTotalLength();
   
-  	pathVar.style.strokeDashrray = length + ' ' + length;
-  	pathVar.style.strokeDashoffset = length;
-  
-  	pathVar.style.transition = pathVar.style.WebkitTransition =
-  		'none';
-  
-  	pathVar.getBoundingClientRect();
-  	
-  	pathVar.style.transition =   pathVar.style.WebkitTransition = 'stroke-dashoffset 5s ease-in-out';
-  	
-  	if (delay) {
-    	pathVar.style['transition-delay'] = pathVar.style.WebkitTransition = delay;
-  	}
-  
-  	pathVar.style.strokeDashoffset = 0;
+		pathVar.style.strokeDashrray = length + ' ' + length;
+		pathVar.style.strokeDashoffset = length;
+	  
+		pathVar.style.transition = pathVar.style.WebkitTransition =
+			'none';
+	  
+		pathVar.getBoundingClientRect();
+		
+		pathVar.style.transition =   pathVar.style.WebkitTransition = 'stroke-dashoffset 5s ease-in-out';
+		
+		if (delay) {
+			pathVar.style['transition-delay'] = pathVar.style.WebkitTransition = delay;
+		}
+	  
+		pathVar.style.strokeDashoffset = 0;
 	},
 	scrollTo: function(locId) {
 
@@ -60,12 +59,6 @@ const HeaderContainer = React.createClass({
 		this.drawSun();
 	},
 	render: function() {
-		/*
-			<Isvg src={ SunSVG }>
-						<img src={ backup } />
-					</Isvg>
-		*/
-
 		// <SunSVG className='normal' /> should go inside 'squiggle' div
 
 		return (
@@ -77,19 +70,19 @@ const HeaderContainer = React.createClass({
 				</div>
 
 				<div id="squiggle">
-					
+
 				</div>
 
 				<div id='header-btn-container'>
-					<div className='btn header-btn'>
+					<a href='#about' className='btn header-btn'>
 						About
-					</div>
-					<div className='btn header-btn'>
+					</a>
+					<a href='#gallery' className='btn header-btn'>
 						Gallery
-					</div>
-					<div className='btn header-btn'>
+					</a>
+					<a href='#contact' className='btn header-btn'>
 						Contact
-					</div>
+					</a>
 				</div>
 			</div>
 		)

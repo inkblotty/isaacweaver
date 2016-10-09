@@ -8,3 +8,26 @@
 @import '_thumbImgs';
 @import '_carousel';
 @import '_animations';
+
+// 				loader: 'babel!react-svg?es5=1'
+
+.has-icon {
+	&::before {
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		content: ' ';
+		height: 2rem;
+	}
+}
+
+.phone::before {
+	background-image: url('../images/phone.svg');
+	background-position: 0 3px;
+	background-size: 1.1em;
+	padding-left: 1.8rem;
+}
+
+.email::before {
+	background-image: url('../images/envelope.svg');
+	padding-left: 2.2rem;
+}
