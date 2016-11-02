@@ -8,7 +8,7 @@ const ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 	<span className='fa fa-th' />
 */
 
-const ImgMenu = props => {
+const ImgMenu = (props) => {
 	return (
 		<div>
 			<div className='image-menu'>

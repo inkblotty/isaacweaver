@@ -8,6 +8,7 @@
 @import '_thumbImgs';
 @import '_carousel';
 @import '_animations';
+@import '_media';
 
 // 				loader: 'babel!react-svg?es5=1'
 
@@ -15,19 +16,21 @@
 	&::before {
 		background-position: 0 0;
 		background-repeat: no-repeat;
+		background-size: 23px;
 		content: ' ';
-		height: 2rem;
+		//height: 20px;
+		margin-right: 3px;
 	}
 }
 
 .phone::before {
 	background-image: url('../images/phone.svg');
 	background-position: 0 3px;
-	background-size: 1.1em;
-	padding-left: 1.8rem;
+	padding-right: 1.8rem;
 }
 
 .email::before {
 	background-image: url('../images/envelope.svg');
-	padding-left: 2.2rem;
+	background-position: 0 4px;
+	padding-right: 2.2rem;
 }
